@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    background: linear-gradient(120deg, #3498db, #8e44ad);
+    flex-direction: column;
+}
+
+.img {
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    border: none;
+    margin: 10px auto 0;
+    /* margin-bottom: 10px; */
+    background: url("../image/1.jpg") no-repeat center center;
+}
+
+.user {
+    font-size: 25px;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.empty {
+    width: 100%;
+    height: 42px;
+    background-color: #fff;
+}
+
+.nav a {
+    display: block;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(120deg, #3498db, #8e44ad);
+    /* background-color: #55585a; */
+    text-decoration: none;
+    color: white;
+    text-indent: 2em;
+    background-size: 800%;
+    line-height: 60px;
+    transition: .25s;
+    font-size: 16px;
+    margin-top: 15px;
+    border-radius: 35px;
+    border: none;
+}
+
+.nav a:hover {
+    /* background-color: #ff6700; */
+    background-size: 100%;
+}
+
+.main-head {
+    width: 100%;
+    height: 75px;
+    position: relative;
+    /* border-bottom: .5px solid rgb(245, 245, 245); */
+    border-bottom: .5px solid black;
+}
+
+.QG {
+    font-size: 30px;
+    color: black;
+    line-height: 75px;
+    text-align: center;
+}
+
+.input-search {
+    border: none;
+    outline: none;
+    text-indent: 2em;
+    font-weight: 400;
+    /* float: right; */
+    width: 200px;
+    height: 33px;
+    background-color: #fff;
+    border-radius: 1%;
+    box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.main-body .load {
+    font-size: 60px;
+    text-align: center;
+    line-height: 600px;
+    color: skyblue;
+}
+
+.main-body {
+    display: flex;
+    /* background-color: pink; */
+    width: 100%;
+    height: 850px;
+}
+
+.search {
+    position: absolute;
+    bottom: 10px;
+    right: 400px;
+}
+
+.left {
+    flex: 1.5;
+}
+
+.nav {
+    width: 250px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.right {
+    flex: 8.5;
+    /* background-color: green; */
+}
+
+.info {
+    margin: 15px auto 65px;
+    color: #4d4d4d;
+    font-size: 20px;
+    text-shadow: 0 1px 0 rgba(186, 183, 183, 0.819);
+    text-align: center;
+}

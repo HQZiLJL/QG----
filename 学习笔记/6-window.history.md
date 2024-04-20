@@ -1,0 +1,6 @@
+刷新 onclick="window.location.reload()"
+前进 onclick="window.history.go(1)"
+后退 onclick="window.history.go(-1)"
+前进 onclick="window.history.forward()"
+后退 onclick="window.history.back()"
+后退并刷新  onclick="window.history.go(-1);window.location.reload()"
