@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home-users</title>
+<script defer src="js/setting.js"></script></head>
+
+<body>
+    <div class="empty"></div>
+    <div class="main-head">
+        <div class="QG">
+            QG Studio会议纪要管理系统
+        </div>
+        <div class="search">
+            <input class="input-search" type="text" placeholder="搜你想搜">
+        </div>
+    </div>
+    <div class="main-body">
+        <div class="left">
+            <div class="img"></div>
+            <div class="user">HQZhen12_</div>
+            <div class="nav nav-setting">
+                <a href="./home-users.html"> 首 页</a>
+                <a href="./draft.html"> 草 稿 箱</a>
+                <a href="./minutes-users.html">纪 要 录 入</a>
+                <a href="./mine.html">我 的 发 布</a>
+                <a href="./history.html">历 史 纪 要</a>
+                <!-- 下拉菜单选分组 -->
+                <a href="./user-info.html">个 人 信 息</a>
+                <a href="./bug.html">bug 反 馈</a>
+                <a href="#" class="setting">设 置</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="load">
+                欢迎使用QG Studio会议纪要管理系统
+            </div>
+            <!-- <div class="body">
+                <ul class="todo-list"></ul>
+                <ul class="footer">
+                    <li class="num"><span class="active-num"></span>&nbsp;item&nbsp;left</li>
+                </ul>
+            </div> -->
+        </div>
+    </div>
+    <footer class="info">
+        <p>Created by HQZhen12</p>
+        <p>Maintenanced by the HQZhen12</p>
+        <p>Part of HQZhen12</p>
+    </footer>
+    <!-- <a href="./aboutMe.html">跳转关于我们</a> -->
+    <!-- <script>
+        //5.根据设备宽度计算html的font-size
+        function resetHtmlFont() {
+            //获取html对象并动态设置font-size=设备宽度/1g
+            document.documentElement.style.fontSize = screen.width / 10 + 'px';
+        }
+        resetHtmlFont();
+        //如果窗口大小变化了，则重新计算基础font-size
+        window.onresize = resetHtmlFont;
+    </script> -->
+    <script>
+        //5.根据设备宽度计算html的font-size
+        function resetHtmlFont() {
+            //获取html对象并动态设置font-size=设备宽度/1g
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+        }
+        resetHtmlFont();
+        //如果窗口大小变化了，则重新计算基础font-size
+        window.onresize = resetHtmlFont;
+    </script>
+</body>
+
+</html>

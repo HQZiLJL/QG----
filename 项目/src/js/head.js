@@ -8,7 +8,7 @@ users.addEventListener("click", () => {
         let leap = setInterval(function () {
             window.location.href = "../dist/login-users.html";
             clearInterval(leap)
-        }, 500)
+        }, 700)
     }
 })
 manager.addEventListener("click", () => {
@@ -17,6 +17,6 @@ manager.addEventListener("click", () => {
         let leap = setInterval(function () {
             window.location.href = "../dist/login-manager.html";
             clearInterval(leap)
-        }, 500)
+        }, 700)
     }
 })

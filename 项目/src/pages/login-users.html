@@ -13,13 +13,12 @@
             <div class="sign">
                 <h1>登录用户端</h1>
                 <div class="txtb">
-                    <input type="username" name="username" id="inputone">
+                    <input type="text" name="username" id="username">
                     <span data-user="username"></span>
                 </div>
                 <div class="txtb">
-                    <input type="password" name="password" id="inputtwo">
+                    <input type="password" name="password" id="password">
                     <span data-user="password"></span>
-
                 </div>
                 <p class="prompt">提示</p>
                 <button class="signin">登&nbsp;录</button>
@@ -29,11 +28,11 @@
             <div class="sign">
                 <h1>注&nbsp;册</h1>
                 <div class="txtb">
-                    <input type="username" name="username" id="inputthree">
+                    <input type="text" name="username" id="usernam">
                     <span data-user="username"></span>
                 </div>
                 <div class="txtb">
-                    <input type="password" name="password" id="inputfour">
+                    <input type="password" name="password" id="passwor">
                     <span data-user="password"></span>
                 </div>
                 <button class="signup">注&nbsp;册</button>
@@ -52,6 +51,38 @@
             </div>
         </div>
     </div>
+    <script>
+        //cookie登录
+        var dc = document.cookie;
+        // console.log(dc);
+        //字符串;字符串;字符串
+        var dc_arr = dc.split(";");
+        // console.log(dc_arr);
+        for (var i = 0; i < dc_arr.length; i++) {
+            var dc = dc_arr[i];
+            var dc_arr_2 = dc.split("=");
+            // console.log(dc_arr_2[0]);
+            if (dc_arr_2[0].trim() === "username") {
+                document.getElementById("username").value = dc_arr_2[1];
+                console.log(1);
+            }
+            if (dc_arr_2[0].trim() === "password") {
+                document.getElementById("password").value = dc_arr_2[1];
+                console.log(2);
+                console.log(document.getElementById("password").value);
+            }
+        }
+    </script>
+    <!-- <script>
+        //5.根据设备宽度计算html的font-size
+        function resetHtmlFont() {
+            //获取html对象并动态设置font-size=设备宽度/1g
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+        }
+        resetHtmlFont();
+        //如果窗口大小变化了，则重新计算基础font-size
+        window.onresize = resetHtmlFont;
+    </script> -->
 </body>
 
 </html>

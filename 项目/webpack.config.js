@@ -6,13 +6,17 @@ module.exports = {
     mode: "development",
     //多个入口，就会有多个出口
     entry: {
+        'bug': "./src/js/bug.js",
+        'draft': "./src/js/draft.js",
+        'history': "./src/js/history.js",
+        'user-info': "./src/js/user-info.js",
         'head': "./src/js/head.js",
+        'setting': "./src/js/setting.js",
         'login-users': "./src/js/login-users.js",
         'login-manager': "./src/js/login-manager.js",
         'home-manager': "./src/js/home-manager.js",
         'home-users': "./src/js/home-users.js",
         'personal': "./src/js/personal.js",
-        'draft': "./src/js/draft.js",
         'mine': "./src/js/mine.js",
         'minutes-users': "./src/js/minutes-users.js",
     },
@@ -51,10 +55,39 @@ module.exports = {
     //插件
     plugins: [
         //plugins的配置
+        // 'bug': "./src/js/bug.js",
+        // 'draft': "./src/js/draft.js",
+        // 'history': "./src/js/history.js",
+        // 'user-info': "./src/js/user-info.js",
+        new HtmlWebpackPlugin({
+            template: "./src/pages/bug.html",
+            filename: "bug.html",
+            chunks: ['bug'],
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/pages/draft.html",
+            filename: "draft.html",
+            chunks: ['draft'],
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/pages/history.html",
+            filename: "history.html",
+            chunks: ['history'],
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/pages/user-info.html",
+            filename: "user-info.html",
+            chunks: ['user-info'],
+        }),
         new HtmlWebpackPlugin({
             template: "./src/pages/head.html",
             filename: "head.html",
             chunks: ['head'],
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/pages/setting.html",
+            filename: "setting.html",
+            chunks: ['setting'],
         }),
         new HtmlWebpackPlugin({
             template: "./src/pages/login-users.html",

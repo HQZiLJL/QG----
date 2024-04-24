@@ -1,7 +1,7 @@
 // export const addFn = (a, b) => a + b;
 import "../css/public.css";
 import "../css/draft.css";
-console.log('minutes');
+console.log('draft');
 //监听鼠标经过菜单栏
 const nav = document.querySelector(".nav");
 const a = document.querySelectorAll(".nav a")
