@@ -14,12 +14,12 @@ for (let i = 0; i < input.length; i++) {
 }
 
 let signup = document.querySelector('#signUp')
-signup.addEventListener("click", () => {
+signup.addEventListener("click", (e) => {
     document.querySelector(".container").classList.add('change')
 })
 
 let signin = document.querySelector("#signIn")
-signin.addEventListener("click", () => {
+signin.addEventListener("click", (e) => {
     document.querySelector(".container").classList.remove("change")
 })
 
@@ -36,7 +36,7 @@ signIn.addEventListener("click", (e) => {
     let xhr = new XMLHttpRequest()
     xhr.open("POST", "http://127.0.0.1:3456/dist/home-users.html")
     xhr.addEventListener("loadend", () => {
-        console.log(JSON.parse(xhr.response));
+        console.log(xhr.response);
         const { msg, status } = JSON.parse(xhr.response);
         console.log(msg === 1 && status === 200);
         if (msg === 1 && status === 200) {
@@ -115,3 +115,4 @@ let prompt = document.querySelector(".prompt")
 prompt.addEventListener("click", () => {
     alert("用户名: HQZhen12     密码: 123456")
 })
+// export { username };

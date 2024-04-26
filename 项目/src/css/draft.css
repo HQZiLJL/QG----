@@ -1,3 +1,59 @@
 .nav-draft .draft {
     background-size: 100%;
 }
+
+.right {
+    display: flex;
+    flex-direction: column;
+    /* justify-self: center;
+    align-self: center; */
+}
+
+.conten {
+    flex: 8.5;
+    position: relative;
+}
+
+.conten ul {
+    position: absolute;
+    top: .344rem;
+    left: 1.454rem;
+}
+
+li {
+    font-size: .11rem;
+    width: 5.704rem;
+    height: .956rem;
+    list-style: none;
+}
+
+li p {
+    line-height: .206rem;
+    display: inline-block;
+    text-indent: 2em;
+    width: 1.395rem;
+    height: .206rem;
+    background-color: #fff;
+}
+
+.content {
+    margin-top: .014rem;
+    font-size: .137rem;
+    width: 5.677rem;
+    height: .442rem;
+}
+
+.click {
+    display: none;
+}
+
+#click {
+    /* position: absolute;
+    top: 200px;
+    left: 200px; */
+    margin-top: .137rem;
+}
+
+.iconText1 {
+    color: red;
+}

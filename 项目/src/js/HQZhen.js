@@ -19,7 +19,7 @@ function HQZhen(options) {
         xhr.open(options.method, options.url + '?' + qs)
         xhr.send()
     } else if (options.method.toUpperCase() === "POST") {
-        //发起PoST请求
+        //发起POST请求
         xhr.open(options.method, options.url)
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
         xhr.send(qs)

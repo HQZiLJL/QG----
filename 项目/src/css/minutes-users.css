@@ -1,3 +1,161 @@
 .nav-minutes .minutes {
     background-size: 100%;
 }
+
+
+.type {
+    position: absolute;
+    left: 70px;
+    top: 60px;
+    font-size: 20px;
+    display: inline;
+}
+
+.type div {
+    display: inline-block;
+}
+
+.sign {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 170px;
+    top: 450px;
+    font-size: 20px;
+    display: inline;
+}
+
+.form {
+    width: 500px;
+    height: 800px;
+    margin: 200px auto 0;
+}
+
+.right p {
+    /* position: absolute; */
+    top: .206rem;
+    left: .206rem;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.form input[type="text"] {
+    width: 1.031rem;
+    height: 30px;
+    text-indent: 2em;
+    border-radius: 2%;
+    background: #fff;
+    opacity: 0.4;
+}
+
+.form input:hover {
+    opacity: 1;
+}
+
+#name {
+    position: absolute;
+    top: .687rem;
+    left: 100px;
+}
+
+.name {
+    position: absolute;
+    top: 169px;
+    left: 100px;
+}
+
+#topic {
+    position: absolute;
+    top: .687rem;
+    left: calc(100px + 250px);
+}
+
+.topic {
+    position: absolute;
+    top: 170px;
+    left: calc(100px + 250px);
+}
+
+#class {
+    position: absolute;
+    top: .687rem;
+    left: calc(350px + 250px);
+}
+
+.class {
+    position: absolute;
+    top: .893rem;
+    left: calc(350px + 250px);
+    ;
+}
+
+#time {
+    position: absolute;
+    top: .687rem;
+    left: calc(600px + 250px);
+}
+
+.time {
+    position: absolute;
+    top: .893rem;
+    left: calc(600px + 250px);
+}
+
+#content {
+    position: absolute;
+    top: 1.031rem;
+    left: .515rem;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+}
+
+#Img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 60px;
+    right: 100px;
+}
+
+#file1 {
+    position: absolute;
+    top: 390px;
+    right: 150px;
+}
+
+#file2 {
+    position: absolute;
+    top: 600px;
+    left: 400px;
+}
+
+.cancel {
+    position: absolute;
+    top: 380px;
+    right: 80px;
+}
+
+#btnUpload {
+    position: absolute;
+    top: 596px;
+    left: 850px;
+}
+
+#btnDraft {
+    position: absolute;
+    top: 596px;
+    left: 660px;
+}
+
+.form .error {
+    opacity: 1;
+    border: 2px solid #e74c3c;
+}
+
+.form .error-message {
+    font-size: 14px;
+    border-color: #e74c3c;
+}
+
+.true {
+    outline: none;
+}

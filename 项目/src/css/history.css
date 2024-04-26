@@ -1,3 +1,133 @@
 .nav-history .history {
     background-size: 100%;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+#banner {
+    /* flex: 1.5; */
+    width: 800px;
+    height: 500px;
+    border: 2px solid #999;
+    overflow: hidden;
+    position: relative;
+    margin: 25px auto;
+}
+
+#imglist {
+    width: 4000px;
+    height: 500px;
+}
+
+#imglist img {
+    width: 800px;
+    height: 500px;
+}
+
+#imglist li {
+    float: left;
+}
+
+.prev {
+    background: #666;
+    width: 30px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    left: 5px;
+    top: 45%;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.next {
+    background: #666;
+    width: 30px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    right: 5px;
+    top: 45%;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#icolist {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+#icolist li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 14px;
+    background: #666;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    float: left;
+    margin-left: 10px;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.conten {
+    flex: 8.5;
+    position: relative;
+}
+
+.conten ul {
+    position: absolute;
+    top: .1rem;
+    left: 1.1rem;
+}
+
+.todo-list li {
+    font-size: .11rem;
+    width: 5.704rem;
+    height: .956rem;
+    list-style: none;
+}
+
+li p {
+    line-height: .206rem;
+    display: inline-block;
+    text-indent: 2em;
+    width: 1.395rem;
+    height: .206rem;
+    background-color: #fff;
+}
+
+.content {
+    margin-top: .014rem;
+    font-size: .137rem;
+    width: 5.677rem;
+    height: .442rem;
+}
+
+.click {
+    display: none;
+}
+
+#click {
+    position: absolute;
+    top: -340px;
+    left: 90px;
+    margin-top: .137rem;
+}
+
+.iconText1 {
+    color: red;
+}

@@ -51,7 +51,7 @@
             </div>
         </div>
     </div>
-    <script>
+    <!-- <script>
         //cookie登录
         var dc = document.cookie;
         // console.log(dc);
@@ -63,16 +63,16 @@
             var dc_arr_2 = dc.split("=");
             // console.log(dc_arr_2[0]);
             if (dc_arr_2[0].trim() === "username") {
-                document.getElementById("username").value = dc_arr_2[1];
+                document.querySelector("username").value = dc_arr_2[1];
                 console.log(1);
             }
             if (dc_arr_2[0].trim() === "password") {
-                document.getElementById("password").value = dc_arr_2[1];
+                document.querySelector("password").value = dc_arr_2[1];
                 console.log(2);
                 console.log(document.getElementById("password").value);
             }
         }
-    </script>
+    </script> -->
     <!-- <script>
         //5.根据设备宽度计算html的font-size
         function resetHtmlFont() {

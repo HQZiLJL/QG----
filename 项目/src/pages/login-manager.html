@@ -64,7 +64,7 @@
             var dc_arr_2 = dc.split("=");
             // console.log(dc_arr_2[0]);
             if (dc_arr_2[0].trim() === "manager") {
-                document.getElementById("manager").value = dc_arr_2[1];
+                document.querySelector("manager").value = dc_arr_2[1];
             }
             if (dc_arr_2[0].trim() === "password") {
                 document.getElementById("password").value = dc_arr_2[1];

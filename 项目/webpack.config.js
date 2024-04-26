@@ -3,10 +3,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { Template } = require("webpack");
 module.exports = {
     //模式
-    mode: "development",
+    mode: "production",
     //多个入口，就会有多个出口
     entry: {
         'bug': "./src/js/bug.js",
+        'detail-users': "./src/js/detail-users.js",
         'draft': "./src/js/draft.js",
         'history': "./src/js/history.js",
         'user-info': "./src/js/user-info.js",
@@ -55,10 +56,6 @@ module.exports = {
     //插件
     plugins: [
         //plugins的配置
-        // 'bug': "./src/js/bug.js",
-        // 'draft': "./src/js/draft.js",
-        // 'history': "./src/js/history.js",
-        // 'user-info': "./src/js/user-info.js",
         new HtmlWebpackPlugin({
             template: "./src/pages/bug.html",
             filename: "bug.html",
@@ -113,6 +110,11 @@ module.exports = {
             template: "./src/pages/minutes-users.html",
             filename: "minutes-users.html",
             chunks: ['minutes-users'],
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/pages/detail-users.html",
+            filename: "detail-users.html",
+            chunks: ['detail-users'],
         }),
         new HtmlWebpackPlugin({
             template: "./src/pages/draft.html",

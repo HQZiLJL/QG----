@@ -9,6 +9,28 @@ body {
     flex-direction: column;
 }
 
+button {
+    border-radius: 20px;
+    border: 1px solid #2bc3ff;
+    background: #2b4eff;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+button:focus {
+    outline: none;
+}
+
 .img {
     width: 116px;
     height: 116px;
@@ -36,14 +58,14 @@ body {
 .nav a {
     display: block;
     width: 100%;
-    height: .393rem;
+    height: .275rem;
     background: linear-gradient(120deg, #3498db, #8e44ad);
     /* background-color: #55585a; */
     text-decoration: none;
     color: white;
     text-indent: 2em;
     background-size: 800%;
-    line-height: .413rem;
+    line-height: .275rem;
     transition: .25s;
     font-size: .11rem;
     margin-top: .103rem;
@@ -62,15 +84,19 @@ body {
     position: relative;
     /* border-bottom: .5px solid rgb(245, 245, 245); */
     border-bottom: .004rem solid black;
-}
-
-
-.QG {
-    font-size: .206rem;
+    font-size: 0.206rem;
     color: black;
     line-height: .515rem;
     text-align: center;
 }
+
+
+/* .QG {
+    font-size: .206rem;
+    color: black;
+    line-height: .515rem;
+    text-align: center;
+} */
 
 .input-search {
     position: absolute;
@@ -97,9 +123,8 @@ body {
 
 .main-body {
     display: flex;
-    /* background-color: pink; */
     width: 100%;
-    height: 6.873rem;
+    height: 800px;
 }
 
 .left {
@@ -113,14 +138,17 @@ body {
 }
 
 .right {
+    position: relative;
     flex: 8.5;
-    /* background-color: green; */
+    /* display: flex; */
+    /* justify-self: center; */
+    /* align-self: center; */
 }
 
 .info {
     margin: .049rem auto .215rem;
     color: #4d4d4d;
-    font-size: .066rem;
+    font-size: 24px;
     text-shadow: 0 .003rem 0 rgba(186, 183, 183, 0.819);
     text-align: center;
 }

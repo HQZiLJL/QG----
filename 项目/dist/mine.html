@@ -1,67 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mine</title>
-<script defer src="js/mine.js"></script></head>
-
-<body>
-    <div class="empty"></div>
-    <div class="main-head">
-        <div class="QG">
-            QG Studio会议纪要管理系统
-        </div>
-        <!-- <div class="search"> -->
-        <input class="input-search" type="text" placeholder="搜你想搜">
-        <!-- </div> -->
-    </div>
-    <div class="main-body">
-        <div class="left">
-            <div class="img"></div>
-            <div class="user">HQZhen12_</div>
-            <div class="nav nav-mine">
-                <a href="./home-users.html"> 首 页</a>
-                <a href="./draft.html"> 草 稿 箱</a>
-                <a href="./minutes-users.html">纪 要 录 入</a>
-                <a href="#" class="mine">我 的 发 布</a>
-                <a href="./history.html">历 史 纪 要</a>
-                <!-- 下拉菜单选分组 -->
-                <a href="./user-info.html">个 人 信 息</a>
-                <a href="./bug.html">bug 反 馈</a>
-                <a href="./setting.html">设 置</a>
-            </div>
-        </div>
-        <div class="right">
-            <div class="insert">
-                <a href="./minutes-users.html"> 点 我 上 传 纪 要 内 容</a>
-                <!-- <button>点我上传纪要内容</button> -->
-            </div>
-            <div class="content">
-                <ul class="todo-list">
-                </ul>
-            </div>
-        </div>
-    </div>
-    <footer class="info">
-        <p>Created by HQZhen12</p>
-        <p>Maintenanced by the HQZhen12</p>
-        <p>Part of HQZhen12</p>
-    </footer>
-    <!-- 4.一般是设备宽度的1/10
-    这个值是动态的，根据设备宽度动态计算的.必须通过js实现 -->
-    <script>
-        //5.根据设备宽度计算html的font-size
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>mine</title><script defer="defer" src="js/mine.js"></script></head><body><div class="empty"></div><div class="main-head">QG Studio会议纪要管理系统 <input class="input-search" placeholder="搜你想搜"></div><div class="main-body"><div class="left"><div class="img"></div><div class="user">HQZhen12_</div><div class="nav nav-mine"><a href="./home-users.html">首 页</a> <a href="./draft.html">草 稿 箱</a> <a href="./minutes-users.html">纪 要 录 入</a> <a href="#" class="mine">我 的 发 布</a> <a href="./history.html">历 史 纪 要</a><a href="./user-info.html">个 人 信 息</a> <a href="./bug.html">bug 反 馈</a> <a href="./setting.html">设 置</a></div></div><div class="right"><div class="insert"><a href="./minutes-users.html">点 我 上 传 纪 要 内 容</a></div><div class="conten"><input type="radio" id="click"><ul class="todo-list"></ul></div></div></div><footer class="info"><p>Created by HQZhen12</p><p>Maintenanced by the HQZhen12</p><p>Part of HQZhen12</p></footer><script>//5.根据设备宽度计算html的font-size
         function resetHtmlFont() {
             //获取html对象并动态设置font-size=设备宽度/1g
             document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
         }
         resetHtmlFont();
         //如果窗口大小变化了，则重新计算基础font-size
-        window.onresize = resetHtmlFont;
-    </script>
-</body>
-
-</html>
+        window.onresize = resetHtmlFont;</script></body></html>

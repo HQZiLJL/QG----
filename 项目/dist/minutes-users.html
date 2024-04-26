@@ -1,58 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>minutes-users</title>
-<script defer src="js/minutes-users.js"></script></head>
-
-<body>
-    <div class="empty"></div>
-    <div class="main-head">
-        <div class="QG">
-            QG Studio会议纪要管理系统
-        </div>
-        <div class="search">
-            <input class="input-search" type="text" placeholder="搜你想搜">
-        </div>
-    </div>
-    <div class="main-body">
-        <div class="left">
-            <div class="img"></div>
-            <div class="user">HQZhen12_</div>
-            <div class="nav nav-minutes">
-                <a href="./home-users.html"> 首 页</a>
-                <a href="./draft.html"> 草 稿 箱</a>
-                <a href="#" class="minutes">纪 要 录 入</a>
-                <a href="./mine.html">我 的 发 布</a>
-                <a href="./history.html">历 史 纪 要</a>
-                <!-- 下拉菜单选分组 -->
-                <a href="./user-info.html">个 人 信 息</a>
-                <a href="./bug.html">bug 反 馈</a>
-                <a href="./setting.html">设 置</a>
-            </div>
-        </div>
-        <div class="right">
-            <input type="text">
-        </div>
-    </div>
-    <footer class="info">
-        <p>Created by HQZhen12</p>
-        <p>Maintenanced by the HQZhen12</p>
-        <p>Part of HQZhen12</p>
-    </footer>
-    <!-- <a href="./aboutMe.html">跳转关于我们</a> -->
-    <script>
-        //5.根据设备宽度计算html的font-size
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>minutes-users</title><script defer="defer" src="js/minutes-users.js"></script></head><body><div class="empty"></div><div class="main-head">QG Studio会议纪要管理系统</div><div class="main-body"><div class="left"><div class="img"></div><div class="user">HQZhen12_</div><div class="nav nav-minutes"><a href="./home-users.html">首 页</a> <a href="./draft.html">草 稿 箱</a> <a href="#" class="minutes">纪 要 录 入</a> <a href="./mine.html">我 的 发 布</a> <a href="./history.html">历 史 纪 要</a><a href="./user-info.html">个 人 信 息</a> <a href="./bug.html">bug 反 馈</a> <a href="./setting.html">设 置</a></div></div><div class="right"><p>请填写会议纪要：</p><div class="type">会议类型： <label>办&nbsp;公 <input type="radio" id="work" name="type" value="0"/></label> <label>康&nbsp;乐 <input type="radio" id="relax" name="type" value="0"/></label></div><div class="sign">会议标签：<br/><br/><div><label>&nbsp;&nbsp;加&nbsp;&nbsp;&nbsp;急&nbsp;&nbsp; <input type="checkbox" id="danger" name="sign" value="加急"/></label></div><div><label>&nbsp;&nbsp;比&nbsp;&nbsp;&nbsp;赛&nbsp;&nbsp; <input type="checkbox" id="gram" name="sign" value="比赛"/></label></div><div><label>&nbsp;&nbsp;外&nbsp;&nbsp;&nbsp;包&nbsp;&nbsp; <input type="checkbox" id="export" name="sign" value="外包"/></label></div><div><label>&nbsp;&nbsp;组&nbsp;&nbsp;&nbsp;会&nbsp;&nbsp; <input type="checkbox" id="min" name="sign" value="组会"/></label></div><div><label>全体大会 <input type="checkbox" id="max" name="sign" value="全体大会"/></label></div></div><div class="form"><input name="name" placeholder="姓名" id="name" autocomplete="off" class="true"> <small class="error-message name"></small> <input name="topic" placeholder="会议主题" id="topic" autocomplete="off"> <small class="error-message topic"></small> <input name="class" placeholder="所属组别" id="class" autocomplete="off"> <small class="error-message class"></small> <input name="time" placeholder="上传时间" id="time" autocomplete="off"> <small class="error-message time"></small> <button type="submit" id="btnDraft">暂存至草稿箱</button> <input type="file" id="file2" name="content" value="个人纪要内容" autocomplete="off"> <textarea id="content" rows="25" cols="133"></textarea> <input type="file" id="file1" name="img" value="会议照片" autocomplete="off"> <img src="" alt="" id="Img"> <button class="cancel">取消上传</button> <button type="submit" id="btnUpload">上传纪要</button></div></div></div><footer class="info"><p>Created by HQZhen12</p><p>Maintenanced by the HQZhen12</p><p>Part of HQZhen12</p></footer><script>//5.根据设备宽度计算html的font-size
         function resetHtmlFont() {
             //获取html对象并动态设置font-size=设备宽度/1g
             document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
         }
         resetHtmlFont();
         //如果窗口大小变化了，则重新计算基础font-size
-        window.onresize = resetHtmlFont;
-    </script>
-</body>
-
-</html>
+        window.onresize = resetHtmlFont;</script></body></html>
