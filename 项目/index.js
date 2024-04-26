@@ -142,61 +142,61 @@ const server = http.createServer((req, res) => {
         })
     }
     //用户注册
-    // else if (req.method === 'POST' && url === '/dist/home-users.html') {
-    //     postData = ''
-    //     req.on('data', chunk => {
-    //         postData += chunk.toString();
-    //     })
-    //     req.on('end', () => {
-    //         console.log('postData', postData);
-    //         post = JSON.parse(postData);
-    //         console.log(post);
-    //         const connection = mysql.createConnection({
-    //             host: "localhost",
-    //             user: "root",
-    //             password: "123456",
-    //             port: "3306",
-    //             database: 'qgstudio',
-    //         })
-    //         //创建连接
-    //         connection.connect();
-    //         //制定插入语句
-    //         var userAddSql = "INSERT INTO userinfo(Id,username,password)VALUES(0,?,?)";
-    //         var userAddSql_Params = [post.username, post.password];
-    //         //插入
-    //         connection.query(userAddSql, userAddSql_Params, function (err) {
-    //             if (err) {
-    //                 console.log('[INSERT ERROR]-:', err.message);
-    //                 return;
-    //             }
-    //             console.log("----------INSERT-----------")
-    //             var end = JSON.stringify({ msg: 1, status: 200 })
-    //             res.end(end)
+    else if (req.method === 'POST' && url === '/dist/home-users.html') {
+        postData = ''
+        req.on('data', chunk => {
+            postData += chunk.toString();
+        })
+        req.on('end', () => {
+            console.log('postData', postData);
+            post = JSON.parse(postData);
+            console.log(post);
+            const connection = mysql.createConnection({
+                host: "localhost",
+                user: "root",
+                password: "123456",
+                port: "3306",
+                database: 'qgstudio',
+            })
+            //创建连接
+            connection.connect();
+            //制定插入语句
+            var userAddSql = "INSERT INTO userinfo(Id,username,password)VALUES(0,?,?)";
+            var userAddSql_Params = [post.username, post.password];
+            //插入
+            connection.query(userAddSql, userAddSql_Params, function (err) {
+                if (err) {
+                    console.log('[INSERT ERROR]-:', err.message);
+                    return;
+                }
+                console.log("----------INSERT-----------")
+                var end = JSON.stringify({ msg: 1, status: 200 })
+                res.end(end)
 
-    //         })
-    //         console.log(1);
-    //         //制定查询语句
-    //         var userGetSql = "SELECT * FROM userinfo";
-    //         connection.query(userGetSql, function (err, result) {
-    //             if (err) {
-    //                 console.log('[SELECT-ERROR]--:', err.message);
-    //                 return;
-    //             }
-    //             console.log(post.username == result[0].username);
-    //             console.log("----------SELECT-----------");
-    //             console.log(post.username == result[0].username);
-    //             console.log(post.username);
-    //             for (let i = 0; i < result.length; i++) {
-    //                 if (post.username == result[i].username) {
-    //                     var end = JSON.stringify({ msg: -1, status: -1 })
-    //                     res.end(end)
-    //                 }
-    //             }
-    //         })
-    //         //关闭连接
-    //         connection.end();
-    //     })
-    // }
+            })
+            console.log(1);
+            //制定查询语句
+            var userGetSql = "SELECT * FROM userinfo";
+            connection.query(userGetSql, function (err, result) {
+                if (err) {
+                    console.log('[SELECT-ERROR]--:', err.message);
+                    return;
+                }
+                console.log(post.username == result[0].username);
+                console.log("----------SELECT-----------");
+                console.log(post.username == result[0].username);
+                console.log(post.username);
+                for (let i = 0; i < result.length; i++) {
+                    if (post.username == result[i].username) {
+                        var end = JSON.stringify({ msg: -1, status: -1 })
+                        res.end(end)
+                    }
+                }
+            })
+            //关闭连接
+            connection.end();
+        })
+    }
     //管理员登录
     else if (req.method === 'POST' && url === '/dist/home-manager.html') {
         postData = ''
@@ -243,61 +243,61 @@ const server = http.createServer((req, res) => {
             connection.end();
         })
     }
-    //管理员注册
-    // else if (req.method === 'POST' && url === '/dist/home-manager.html') {
-    //     postData = ''
-    //     req.on('data', chunk => {
-    //         postData += chunk.toString();
-    //     })
-    //     req.on('end', () => {
-    //         console.log('postData', postData);
-    //         post = JSON.parse(postData);
-    //         console.log(post);
-    //         const connection = mysql.createConnection({
-    //             host: "localhost",
-    //             user: "root",
-    //             password: "123456",
-    //             port: "3306",
-    //             database: 'qgstudio',
-    //         })
-    //         //创建连接
-    //         connection.connect();
-    //         //制定查询语句
-    //         var userGetSql = "SELECT * FROM managerinfo";
-    //         connection.query(userGetSql, function (err, result) {
-    //             if (err) {
-    //                 console.log('[SELECT-ERROR]--:', err.message);
-    //                 return;
-    //             }
-    //             console.log("----------SELECT-----------");
-    //             // console.log(post.username == result[0].username);
-    //             for (let i = 0; i < result.length; i++) {
-    //                 if (post.manager == result[i].manager) {
-    //                     var end = JSON.stringify({ msg: -1, status: -1 })
-    //                     res.end(end)
-    //                 }
-    //             }
-    //         })
-    //         //制定插入语句
-    //         var userAddSql = "INSERT INTO managerinfo(Id,manager,password)VALUES(0,?,?)";
-    //         // console.log(post.username);
-    //         var userAddSql_Params = [post.manager, post.password];
-    //         //插入
-    //         connection.query(userAddSql, userAddSql_Params, function (err) {
-    //             if (err) {
-    //                 console.log('[INSERT ERROR]-:', err.message);
-    //                 return;
-    //             }
-    //             console.log("----------INSERT-----------")
-    //             var end = JSON.stringify({ msg: 1, status: 200 })
-    //             res.end(end)
+    // 管理员注册
+    else if (req.method === 'POST' && url === '/dist/home-manager.html') {
+        postData = ''
+        req.on('data', chunk => {
+            postData += chunk.toString();
+        })
+        req.on('end', () => {
+            console.log('postData', postData);
+            post = JSON.parse(postData);
+            console.log(post);
+            const connection = mysql.createConnection({
+                host: "localhost",
+                user: "root",
+                password: "123456",
+                port: "3306",
+                database: 'qgstudio',
+            })
+            //创建连接
+            connection.connect();
+            //制定查询语句
+            var userGetSql = "SELECT * FROM managerinfo";
+            connection.query(userGetSql, function (err, result) {
+                if (err) {
+                    console.log('[SELECT-ERROR]--:', err.message);
+                    return;
+                }
+                console.log("----------SELECT-----------");
+                // console.log(post.username == result[0].username);
+                for (let i = 0; i < result.length; i++) {
+                    if (post.manager == result[i].manager) {
+                        var end = JSON.stringify({ msg: -1, status: -1 })
+                        res.end(end)
+                    }
+                }
+            })
+            //制定插入语句
+            var userAddSql = "INSERT INTO managerinfo(Id,manager,password)VALUES(0,?,?)";
+            // console.log(post.username);
+            var userAddSql_Params = [post.manager, post.password];
+            //插入
+            connection.query(userAddSql, userAddSql_Params, function (err) {
+                if (err) {
+                    console.log('[INSERT ERROR]-:', err.message);
+                    return;
+                }
+                console.log("----------INSERT-----------")
+                var end = JSON.stringify({ msg: 1, status: 200 })
+                res.end(end)
 
-    //         })
-    //         //关闭连接
-    //         connection.end();
-    //         // res.end(postData);
-    //     })
-    // }
+            })
+            //关闭连接
+            connection.end();
+            // res.end(postData);
+        })
+    }
     //纪要录入
     else if (req.method === 'POST' && url === '/api/formdata') {
         postData = ''
